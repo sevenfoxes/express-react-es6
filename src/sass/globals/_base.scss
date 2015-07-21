@@ -1,0 +1,21 @@
+%base {
+  height: 100%;
+}
+
+html {
+  background: #ccc;
+  @extend %base;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  @extend %base;
+}
+
+#main {
+  @extend %base;
+}
+
+p {
+  margin: 0 0 1em;
+}

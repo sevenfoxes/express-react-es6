@@ -19,7 +19,16 @@
     "webpack-dev-server": "^1.10.1"
   },
   "devDependencies": {
-    "eslint": "^1.0.0-rc-1"
+    "bourbon-libsass": "^1.0.0",
+    "css-loader": "^0.15.5",
+    "eslint": "^1.0.0-rc-1",
+    "node-neat": "^1.7.2",
+    "normalize.scss": "^0.1.0",
+    "sass-loader": "^1.0.2",
+    "style-loader": "^0.12.3"
+  },
+  "peerDependencies": {
+    "node-sass": "^3.2.0"
   },
   "scripts": {
     "clean": "rm -rf lib",

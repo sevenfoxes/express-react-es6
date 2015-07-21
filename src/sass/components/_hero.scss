@@ -1,0 +1,67 @@
+.hero {
+  min-height: 100%;
+  //width: 100%;
+  top: 0;
+  left: 0;
+  text-transform: lowercase;
+  //background-image: url('file!./img/orca.jpg');
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+
+  .bigger {
+    font-size: 27px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .-inner {
+    @include transform(translateY(-50%));
+    position: absolute;
+    top: 50%;
+    padding: $space-base-large;
+  }
+
+  @include media ($whale) {
+    font-size: 30px;
+  }
+
+  .-logo {
+    font-size: 45px;
+    font-weight: 300;
+
+    //@include media ($bass) {
+      //font-size: 8vw;
+    //}
+
+    //@include media ($whale) {
+    //  font-size: 100px;
+    //}
+  }
+
+  .-tag {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .-cta {
+    text-align: left;
+
+    button {
+      @include flex(1);
+
+      + button {
+        margin-left: $space-base-large;
+      }
+    }
+  }
+
+  .-highlight {
+    color: $white;
+    text-shadow: 0 0 3px #555;
+  }
+
+  .-period {
+    color: $branding-color;
+  }
+}

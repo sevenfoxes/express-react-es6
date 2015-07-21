@@ -1,3 +1,4 @@
+var path = require("path");
 var webpack = require('./node_modules/webpack');
 
 module.exports = {
@@ -21,7 +22,9 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.jsx?$/, loaders: ['react-hot', 'babel-loader?experimental'], exclude: /node_modules/ }
+      { test: /\.jsx?$/, loaders: ['react-hot', 'babel-loader?experimental'], exclude: /node_modules/ },
+      { test: /\.scss$/, loader: "style!css!sass?includePaths[]='" +
+        (path.resolve(__dirname, "./node_modules"))}
     ]
   }
 }

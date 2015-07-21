@@ -1,0 +1,33 @@
+.header-nav {
+  background: $branding-color-light;
+  padding: $space-base-small $space-base-medium 0;
+  height: $ios-md;
+
+  .-logo {
+    color: $black;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 35px;
+  }
+
+  .-period {
+    color: $branding-color;
+  }
+
+  .-highlight {
+    color: $white;
+  }
+
+  //////////// -----------
+  // menu button
+  //////////// -----------
+  .-menu-trigger {
+    background: $branding-color;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    color: $white;
+    width: $ios-md;
+  }
+}

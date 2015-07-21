@@ -1,0 +1,45 @@
+// fix positions
+%flr {
+  position: fixed;
+  top: 0;
+  height: 100%;
+}
+
+%ftb {
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+
+//leading underscore indicates GLOBAL
+._{
+  &fixed-top {
+    @extend %ftb;
+    top: 0;
+  }
+
+  &fixed-right {
+    @extend %flr;
+    right: 0;
+  }
+
+  &fixed-left {
+    @extend %flr;
+    left: 0;
+  }
+
+  &fixed-bottom {
+    @extend %ftb;
+    bottom: 0;
+  }
+
+
+  // flexing
+  &flexible {
+    @include display (flex);
+  }
+
+  &flex-space {
+    @include flex (1);
+  }
+}

@@ -1,0 +1,28 @@
+%button-base {
+  padding: .5em .7em;
+  line-height: 24px;
+  border: 2px solid #333;
+  font-weight: bold;
+}
+
+.btn-primary {
+  @extend %button-base;
+  background: $branding-color;
+  border-color: $branding-color;
+  color: $white;
+}
+
+.btn-secondary {
+  @extend %button-base;
+  background: rgba(#eee, .2);
+  //border: none;
+  font-weight: bold;
+  color: #333;
+  //text-decoration: underline;
+
+  &:after {
+    //content: ">";
+    display: inline-block;
+    text-decoration: none;
+  }
+}

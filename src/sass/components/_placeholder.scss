@@ -1,0 +1,42 @@
+.placeholder {
+  @include transform(translateY(-50%));
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 5vw;
+
+  @include media ($bass) {
+    font-size: 2.5vw;
+  }
+
+  @include media ($whale) {
+    font-size: 30px;
+  }
+
+  .logo {
+    font-size: 16vw;
+    font-weight: 300;
+    text-shadow: 0 0 15px #555;
+
+    @include media ($bass) {
+      font-size: 8vw;
+    }
+
+    @include media ($whale) {
+      font-size: 100px;
+    }
+  }
+
+  .highlight {
+    color: white;
+  }
+
+  .period {
+    color: $branding-color;
+  }
+
+}
