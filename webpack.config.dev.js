@@ -1,30 +1,32 @@
 var path = require("path");
 var webpack = require('./node_modules/webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
     './src/client/entry',
   ],
   output: {
-    path: __dirname + '/public/js/',
+    path: __dirname + '/public/assets/',
     filename: 'app.js',
-    publicPath: 'http://localhost:8080/js/',
+    publicPath: 'http://localhost:8080/assets/',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
+    new ExtractTextPlugin('app.css')
   ],
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['', '.js', '.scss']
   },
   module: {
     loaders: [
       { test: /\.jsx?$/, loaders: ['react-hot', 'babel-loader?experimental'], exclude: /node_modules/ },
-      { test: /\.scss$/, loader: "style!css!sass?includePaths[]='" +
-        (path.resolve(__dirname, "./node_modules"))}
+      { test: /\.scss$/, loader: ExtractTextPlugin.extract('css?sourceMap!' + 'sass?sourceMap')},
+      { test: /.*\.(gif|png|jpe?g|svg)$/i, loader: "file-loader" }
     ]
   }
 }

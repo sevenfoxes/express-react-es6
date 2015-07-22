@@ -11,5 +11,6 @@ export default (
     <Route path="/" handler={Home} />
     <Route path="/about" handler={About}/>
     <Route path="/solution" handler={Solution}/>
+    <Route path="/assets/app.css" />
   </Route>
 );
